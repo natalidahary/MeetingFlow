@@ -18,5 +18,8 @@
     <Project Path="MeetingFlow.Microservices/src/Engines/SchedulingEngine/SchedulingEngine.csproj" />
     <Project Path="MeetingFlow.Microservices/src/Accessors/DataAccessor/DataAccessor.csproj" />
     <Project Path="MeetingFlow.Microservices/src/Accessors/NotificationsAccessor/NotificationsAccessor.csproj" />
+    <Project Path="MeetingFlow.Microservices/tests/MeetingFlow.ComponentTests/MeetingFlow.ComponentTests.csproj" />
+    <Project Path="MeetingFlow.Microservices/tests/MeetingFlow.IntegrationTests/MeetingFlow.IntegrationTests.csproj" />
+    <Project Path="MeetingFlow.Microservices/tests/MeetingFlow.SystemTests/MeetingFlow.SystemTests.csproj" />
   </Folder>
 </Solution>

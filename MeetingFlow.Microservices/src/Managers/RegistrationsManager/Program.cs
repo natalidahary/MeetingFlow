@@ -133,3 +133,5 @@ app.MapPost("/feedback", async (SubmitFeedbackRequest request, DataAccessorClien
 });
 
 app.Run();
+
+public partial class Program;
