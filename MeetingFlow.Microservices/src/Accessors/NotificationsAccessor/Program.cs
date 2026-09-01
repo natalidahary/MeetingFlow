@@ -88,6 +88,22 @@ app.MapPost("/notifications/send", async (
     return Results.Ok(ToDto(notification));
 });
 
+// Test support is opt-in and is intentionally not routed through Gateway.
+// Deleting by attendee makes cleanup possible even if a test fails before it
+// captures the asynchronously created notification ID.
+if (app.Configuration.GetValue<bool>("TestSupport:Enabled"))
+{
+    app.MapDelete("/_test/notifications/by-attendee/{attendeeId:guid}", async (
+        Guid attendeeId,
+        NotificationsDbContext db) =>
+    {
+        await db.Notifications
+            .Where(notification => notification.AttendeeId == attendeeId)
+            .ExecuteDeleteAsync();
+        return Results.NoContent();
+    });
+}
+
 app.Run();
 
 static NotificationDto ToDto(Notification notification) =>
@@ -98,3 +114,7 @@ static NotificationDto ToDto(Notification notification) =>
         notification.Subject,
         notification.Body,
         notification.SentAt);
+
+// WebApplicationFactory uses this entry point to start the complete HTTP
+// component and its hosted RabbitMQ consumer in the test process.
+public partial class Program { }

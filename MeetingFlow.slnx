@@ -1,6 +1,7 @@
 <Solution>
   <Folder Name="/MeetingFlow.ClientServer/">
     <Project Path="MeetingFlow.ClientServer/MeetingFlow.Api/MeetingFlow.Api.csproj" />
+    <Project Path="MeetingFlow.ClientServer/MeetingFlow.Api.Tests/MeetingFlow.Api.Tests.csproj" />
   </Folder>
   <Project Path="MeetingFlow.Monolith/MeetingFlow.Monolith.csproj" />
   <Project Path="MeetingFlow.Monolith.Tests/MeetingFlow.Monolith.Tests.csproj" />
@@ -21,5 +22,9 @@
     <Project Path="MeetingFlow.Microservices/tests/MeetingFlow.ComponentTests/MeetingFlow.ComponentTests.csproj" />
     <Project Path="MeetingFlow.Microservices/tests/MeetingFlow.IntegrationTests/MeetingFlow.IntegrationTests.csproj" />
     <Project Path="MeetingFlow.Microservices/tests/MeetingFlow.SystemTests/MeetingFlow.SystemTests.csproj" />
+    <Project Path="MeetingFlow.Microservices/tests/MeetingFlow.SchedulingEngine.ComponentTests/MeetingFlow.SchedulingEngine.ComponentTests.csproj" />
+    <Project Path="MeetingFlow.Microservices/tests/MeetingFlow.DataAccessor.ComponentTests/MeetingFlow.DataAccessor.ComponentTests.csproj" />
+    <Project Path="MeetingFlow.Microservices/tests/MeetingFlow.RegistrationsManager.ComponentTests/MeetingFlow.RegistrationsManager.ComponentTests.csproj" />
+    <Project Path="MeetingFlow.Microservices/tests/MeetingFlow.Microservices.IntegrationTests/MeetingFlow.Microservices.IntegrationTests.csproj" />
   </Folder>
 </Solution>
