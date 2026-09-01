@@ -13,6 +13,7 @@ public static class MeetingsEndpoints
         app.MapGet("/api/meetings", async (MeetingFlowDbContext db) =>
         {
             var meetings = await db.Meetings
+                .Where(e => e.Status == "Published")
                 .Include(e => e.Venue)
                 .Include(e => e.Sessions)
                 .ToListAsync();

@@ -38,8 +38,8 @@ the test must read the "before" count at runtime and never assume a fixed number
 
 ## Locator notes
 
-- Page heading — `getByRole('heading', { name: 'Register for an Meeting', level: 1 })`. The awkward
-  "an Meeting" is the real observed copy, not a typo in this plan.
+- Page heading — `getByRole('heading', { name: 'Register for a Meeting', level: 1 })`. Previously read
+  "Register for an Meeting" — fixed as part of the E2E homework (Bug 2a).
 - Register button — `getByRole('button', { name: 'Register' })`.
 - Success message — `getByText('Registration created successfully!')`. Content assertion, so
   `getByText` is the right tool.
@@ -88,7 +88,7 @@ a single test.
   3. Note the Registrations count of a *second* Published meeting (e.g. "Cloud Integration Day") as
      a control.
   4. Navigate to `/register`.
-     - expect: the heading 'Register for an Meeting' (level 1) is visible.
+     - expect: the heading 'Register for a Meeting' (level 1) is visible.
   5. In the Meeting select, choose the first meeting from step 2.
   6. Fill Your Name with `attendee.name` and Your Email with `attendee.email`. Leave Ticket Type at
      its default.

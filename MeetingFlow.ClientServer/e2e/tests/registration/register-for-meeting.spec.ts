@@ -32,7 +32,7 @@ test.describe('Attendee Registration', () => {
 
     // 4. Navigate to `/register`.
     await page.goto('/register');
-    await expect(page.getByRole('heading', { name: 'Register for an Meeting', level: 1 })).toBeVisible();
+    await expect(page.getByRole('heading', { name: 'Register for a Meeting', level: 1 })).toBeVisible();
 
     // 5. In the Meeting select, choose the first meeting from step 2.
     const meetingSelect = page.getByLabel('Meeting');

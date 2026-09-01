@@ -54,7 +54,7 @@ export default function CreateRegistrationPage() {
 
   return (
     <>
-      <h1>Register for an Meeting</h1>
+      <h1>Register for a Meeting</h1>
 
       <div className="warning-box">
         <strong>Educational Note:</strong> This form posts a Registration entity directly to the API. A malicious user
@@ -95,8 +95,8 @@ export default function CreateRegistrationPage() {
         </div>
 
         <div className="field">
-          <label>Ticket Type</label>
-          <select value={ticketType} onChange={(e) => setTicketType(e.target.value)}>
+          <label htmlFor="ticketType">Ticket Type</label>
+          <select id="ticketType" value={ticketType} onChange={(e) => setTicketType(e.target.value)}>
             <option value="General">General</option>
             <option value="VIP">VIP</option>
             <option value="Early Bird">Early Bird</option>
